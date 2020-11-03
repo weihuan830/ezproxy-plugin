@@ -1,0 +1,21 @@
+{ 
+    "manifest_version": 2,
+    "name": "HKUST ezproxy",
+    "version": "1.0", 
+    "description": "For student to download PDF through library outside HKUST",
+    "browser_action": {
+    }, 
+    "permissions": [ 
+    "http://*/", 
+    "bookmarks", 
+    "tabs", 
+    "history" 
+    ] , 
+    "content_scripts": [ 
+        { 
+            "matches": ["https://*/*", "http://*/*"],
+            "all_frames": true,
+            "js": ["index.js"]
+        } 
+    ]
+}
